@@ -1,5 +1,29 @@
-
 //   let str="the-camel_case-tRy";
+
+//! Kendi Çözümüm
+function toCamelCase(str){
+    let yeni ="";
+      let fixed = str;
+      if(str.includes("-")){
+         fixed = str.split("-");
+         }
+    else if(str.includes("_")){
+         fixed = str.split("_");
+         }
+    
+    for(let i=0; i<fixed.length; i++){
+      if(i==0){
+        yeni+=fixed[i];
+      }
+      else{
+         yeni+= fixed[i].charAt(0).toUpperCase() + fixed[i].slice(1).toLowerCase();
+        }
+    }
+      return yeni;
+    }
+    
+
+
 
 //! 1. Çözüm
 
@@ -29,4 +53,3 @@
 //     return str.split(/-|_/g).map((w, i) => (i > 0 ? w.charAt(0).toUpperCase() : w.charAt(0)) + w.slice(1)).join('');
 //   }
 
-//! Kendi Çözümüm
