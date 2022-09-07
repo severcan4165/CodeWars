@@ -35,7 +35,6 @@ function toCamelCase(str){
 // }
 
 
-
 //! 2. Çözüm
 
 // function toCamelCase(str){
